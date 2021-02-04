@@ -35,6 +35,9 @@ Reponse bodies conform to the following structure:
 - The word "last" in the context of some data (example: last location status),
   refers to the last available data from an entity (vehicle). This data could
   be from a minute ago or from a year ago depending on various factors.
+- Some APIs are limited/restricted to the **availability of the data**.
+  These APIs are marked as **Restricted** right below the API group heading.
+
 ## Common API parameters defined
 - `vehicleno` - Represents the vehicle registration number
 - `starttime` - Represents the time **starting from** which the desired data is
@@ -247,6 +250,7 @@ Reponse bodies conform to the following structure:
     }
  ```
 ### Fuel Information
+- **Restricted**/Subject to availability of CAN data
 #### Fuel History
  - Fuel history can be obtained using the following API:
  ```bash
