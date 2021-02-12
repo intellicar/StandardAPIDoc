@@ -251,7 +251,7 @@ Reponse bodies conform to the following structure:
     }
  ```
 ### Fuel Information
-- **Restricted**/Subject to availability of CAN data
+**Restricted/Subject to availability of CAN data**
 #### Fuel History
  - Fuel history can be obtained using the following API:
  ```bash
@@ -321,7 +321,7 @@ Reponse bodies conform to the following structure:
     }
  ```
 ### Battery Information
-- **Restricted**/Subject to availability of CAN data
+**Restricted/Subject to availability of CAN data**
 #### Last Battery Metrics
  - Last Battery Metrics can be obtained using the following API:
  ```bash
