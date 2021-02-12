@@ -8,6 +8,7 @@
     2. [Administrative](#administrative)
     3. [Location Information](#location-information)
     4. [Fuel Information](#fuel-information)
+    5. [Battery Information](#battery-information)
 
 ## Getting Started
 - The Standard APIs are organised around REST. It accepts JSON request bodies and
@@ -35,8 +36,8 @@ Reponse bodies conform to the following structure:
 - The word "last" in the context of some data (example: last location status),
   refers to the last available data from an entity (vehicle). This data could
   be from a minute ago or from a year ago depending on various factors.
-- Some APIs are limited/restricted to the **availability of the data**.
-  These APIs are marked as **Restricted** right below the API group heading.
+- Some APIs are subject to the **availability of the data**.
+- These APIs are marked as **Restricted** right below the API group heading.
 
 ## Common API parameters defined
 - `vehicleno` - Represents the vehicle registration number
@@ -151,8 +152,8 @@ Reponse bodies conform to the following structure:
            "model": "<vehicle-model>",
            "assignedgroups": [
              {
-               "groupname": "<groupname>",
-             },
+               "groupname": "<groupname>"
+             }
            ]
        },
        "err": "<err>",
@@ -318,4 +319,20 @@ Reponse bodies conform to the following structure:
        "err": "<err>",
        "msg": "<msg>"
     }
+ ```
+### Battery Information
+- **Restricted**/Subject to availability of CAN data
+#### Last Battery Metrics
+ - Last Battery Metrics can be obtained using the following API:
+ ```bash
+    curl https://apiplatform.intellicar.in/api/standard/getlastbatterymetrics \
+        --header 'Content-Type: application/json' \
+        --data '{"token": "<token>", "vehicleno": "<vehicleno>"}'
+ ```
+#### Battery Metrics History
+ - Battery Metrics history can be obtained using the following API:
+ ```bash
+    curl https://apiplatform.intellicar.in/api/standard/getbatterymetricshistory \
+        --header 'Content-Type: application/json' \
+        --data '{"token": "<token>", "vehicleno": "<vehicleno>", "starttime": "<epoch-utc>", "endtime": "<epoch-utc>"}'
  ```
