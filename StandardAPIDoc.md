@@ -27,6 +27,8 @@ Reponse bodies conform to the following structure:
     not to be considered verbatim (including the actual datatype i.e.
     replace the content mentioned with the appropriate datatype).
 - The pipe (|) symbol in the `status` part signifies an OR.
+- In the event that `err` parameter is is non-null, `data` is expected to be
+    null.
 - `data` can be either an Object ({}) type or an Array ([]) type.
 
 ## Conventions
@@ -329,10 +331,55 @@ Reponse bodies conform to the following structure:
         --header 'Content-Type: application/json' \
         --data '{"token": "<token>", "vehicleno": "<vehicleno>"}'
  ```
+ - Response structure:
+ ```json
+    {
+       "status": "SUCCESS|FAILURE",
+       "data": {
+           "soc": {
+               "value": "<val>",
+               "timestamp": "epoch-utc"
+            },
+           "battery_temp": {
+               "value": "<val>",
+               "timestamp": "epoch-utc"
+           },
+           "battery_voltage": {
+               "value": "<val>",
+               "timestamp": "epoch-utc"
+           },
+           "current": {
+               "value": "<val>",
+               "timestamp": "epoch-utc"
+           }
+       },
+       "err": "<err>",
+       "msg": "<msg>"
+    }
+ ```
 #### Battery Metrics History
  - Battery Metrics history can be obtained using the following API:
  ```bash
     curl https://apiplatform.intellicar.in/api/standard/getbatterymetricshistory \
         --header 'Content-Type: application/json' \
         --data '{"token": "<token>", "vehicleno": "<vehicleno>", "starttime": "<epoch-utc>", "endtime": "<epoch-utc>"}'
+ ```
+ - Response structure:
+ ```json
+    {
+       "status": "SUCCESS|FAILURE",
+       "data": [
+           {
+               "soc": "<soc>",
+               "soh": "<soh>",
+               "battery_temp": "<battery-temp>",
+               "battery_voltage": "<battery-voltage>",
+               "charge_cycle": "<charge-cycle>",
+               "current": "<current>",
+               "time": <utc-epoch>
+           }
+    ],
+       "err": "<err>",
+       "msg": "<msg>"
+    }
  ```
