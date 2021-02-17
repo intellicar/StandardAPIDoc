@@ -376,7 +376,7 @@ Reponse bodies conform to the following structure:
                "battery_voltage": "<battery-voltage>",
                "charge_cycle": "<charge-cycle>",
                "current": "<current>",
-               "time": <utc-epoch>
+               "time": "<utc-epoch>"
            }
     ],
        "err": "<err>",
