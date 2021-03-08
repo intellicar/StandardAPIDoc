@@ -174,18 +174,11 @@ Reponse bodies conform to the following structure:
  ```json
     {
        "status": "SUCCESS|FAILURE",
-       "data": {
-           "vehicleno": "<vehicleno>",
-           "createdat": "<utc-epoch>",
-           "createdby": "<username>",
-           "type": "<vehicle-type>",
-           "model": "<vehicle-model>",
-           "assignedgroups": [
-             {
-               "groupname": "<groupname>"
-             }
-           ]
-       },
+       "data": [
+           {
+               "deviceid": "<deviceid>"
+           }
+       ],
        "err": "<err>",
        "msg": "<msg>"
     }
