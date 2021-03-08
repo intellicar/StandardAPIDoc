@@ -163,6 +163,34 @@ Reponse bodies conform to the following structure:
     }
  ```
 
+#### Bound Devices
+ - The device(s) bound to a vehicle can be accessed using the following API:
+ ```bash
+    curl https://apiplatform.intellicar.in/api/standard/getdeviceforvehicle \
+        --header 'Content-Type: application/json' \
+        --data '{"token": "<token>", "vehicleno": "<vehicleno>"}'
+ ```
+- Response structure:
+ ```json
+    {
+       "status": "SUCCESS|FAILURE",
+       "data": {
+           "vehicleno": "<vehicleno>",
+           "createdat": "<utc-epoch>",
+           "createdby": "<username>",
+           "type": "<vehicle-type>",
+           "model": "<vehicle-model>",
+           "assignedgroups": [
+             {
+               "groupname": "<groupname>"
+             }
+           ]
+       },
+       "err": "<err>",
+       "msg": "<msg>"
+    }
+ ```
+
 ### Location Information
 #### Last Location Status
  - Last location status can be obtained using the following API:
