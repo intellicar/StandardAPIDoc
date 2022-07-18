@@ -408,9 +408,9 @@ Reponse bodies conform to the following structure:
  - Vehicle can be Immobilised using the following API:
  - Note: 'type' field in data is optional, by default crank immobilize command will be triggered.
  ```bash
-    curl 'https://apiplatform.intellicar.in/api/standard/immobilize' \
+    curl https://apiplatform.intellicar.in/api/standard/immobilize \
          --header 'Content-Type: application/json' \
-         --data '{ "vehicleno":  "<vehicleno>", "type": "<ignition|crank>", "token": "<token>"}'
+         --data '{"vehicleno":  "<vehicleno>", "type": "<ignition|crank>", "token": "<token>"}'
  ```
  - Response structure:
  ```json
@@ -424,7 +424,7 @@ Reponse bodies conform to the following structure:
 - Vehicle can be Mobilised using the following API:
 - Note: 'type' field in data is optional, by default crank mobilize command will be triggered.
  ```bash
-    curl 'https://apiplatform.intellicar.in/api/standard/mobilize' \
+    curl https://apiplatform.intellicar.in/api/standard/mobilize \
          --header 'Content-Type: application/json' \
          --data '{"vehicleno":  "<vehicleno>", "type": "<ignition|crank>", "token": "<token>"}'
  ```
