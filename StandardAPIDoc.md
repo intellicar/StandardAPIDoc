@@ -404,3 +404,36 @@ Reponse bodies conform to the following structure:
        "msg": "<msg>"
     }
  ```
+ #### Vehicle Immob/Mob
+ - Vehicle can be Immobilised using the following API:
+ - Note: 'type' field in data is optional, by default crank immobilize command will be triggered.
+ ```bash
+    curl 'https://apiplatform.intellicar.in/api/standard/immobilize' \
+         --header 'Content-Type: application/json' \
+         --data '{ "vehicleno":  "<vehicleno>", "type": "<ignition|crank>", "token": "<token>"}'
+ ```
+ - Response structure:
+ ```json
+    {
+        "status": "SUCCESS|FAILURE",
+        "data": "<Ignition|Crank> Immobilize command sent for Vehicle <vehicleno>",
+        "err": "<err>",
+        "msg": "<msg>"
+    }
+ ```
+- Vehicle can be Mobilised using the following API:
+- Note: 'type' field in data is optional, by default crank mobilize command will be triggered.
+ ```bash
+    curl 'https://apiplatform.intellicar.in/api/standard/mobilize' \
+         --header 'Content-Type: application/json' \
+         --data '{"vehicleno":  "<vehicleno>", "type": "<ignition|crank>", "token": "<token>"}'
+ ```
+ - Response structure:
+ ```json
+    {
+        "status": "SUCCESS|FAILURE",
+        "data": "<Ignition|Crank> Mobilize command sent for Vehicle <vehicleno>",
+        "err": "<err>",
+        "msg": "<msg>"
+    }
+ ```
