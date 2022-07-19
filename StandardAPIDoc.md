@@ -75,7 +75,7 @@ Reponse bodies conform to the following structure:
  - This API is first one that needs to be used before all else in an
      application/a script.
  - If the credentials provided are incorrect, a 401 status code is returned.
- - Every token has an expiry time post which it isn't valid.
+ - Every token has an expiry time (~15 days) post which it isn't valid.
 
 ### Administrative
 #### Change Password
