@@ -437,3 +437,38 @@ Reponse bodies conform to the following structure:
         "msg": "<msg>"
     }
  ```
+### Last CAN Information
+**Restricted/Subject to availability of CAN data**
+#### Last CAN data 
+ - Last CAN data can be obtained using the following API:
+ ```bash
+    curl https://apiplatform.intellicar.in/api/standard/getlatestcan \
+        --header 'Content-Type: application/json' \
+        --data '{"token": "<token>", "vehicleno": "<vehicleno>"}'
+ ```
+ - Response structure:
+ ```json
+    {
+       "status": "SUCCESS|FAILURE",
+       "data": {
+           "soc": {
+               "value": "<val>",
+               "timestamp": "epoch-utc"
+            },
+           "battery_temp": {
+               "value": "<val>",
+               "timestamp": "epoch-utc"
+           },
+           "battery_voltage": {
+               "value": "<val>",
+               "timestamp": "epoch-utc"
+           },
+           "motor_temperature": {
+               "value": "<val>",
+               "timestamp": "epoch-utc"
+           }
+       },
+       "err": "<err>",
+       "msg": "<msg>"
+    }
+ ```
