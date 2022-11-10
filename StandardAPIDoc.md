@@ -472,3 +472,38 @@ Reponse bodies conform to the following structure:
        "msg": "<msg>"
     }
  ```
+
+### Get Vehicle Device Mapping Information
+#### Vehicle Device Mapping 
+ - Vehicle Device Mapping can be obtained using the following API:
+ ```bash
+    curl https://apiplatform.intellicar.in/api/standard/listvehicledevicemapping \
+        --header 'Content-Type: application/json' \
+        --data '{"token": "<token>"}'
+ ```
+ - Response structure:
+ ```json
+    {
+       "status": "SUCCESS|FAILURE",
+       "data": [
+            {
+                "deviceno": "1234",
+                "vehicleno": "TS08XXX1"
+            },
+            {
+                "deviceno": "1235",
+                "vehicleno": "TS08XXX2"
+            },
+            {
+                "deviceno": "1236",
+                "vehicleno": "TS08XXX3"
+            },
+            {
+                "deviceno": "1237",
+                "vehicleno": "TS08XXX4"
+            }
+         ]
+       "err": "<err>",
+       "msg": "<msg>"
+    }
+ ```
