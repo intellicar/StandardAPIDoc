@@ -410,7 +410,7 @@ Reponse bodies conform to the following structure:
  ```bash
     curl https://apiplatform.intellicar.in/api/standard/immobilize \
          --header 'Content-Type: application/json' \
-         --data '{"vehicleno":  "<vehicleno>", "type": "<ignition|crank>", "token": "<token>"}'
+         --data '{"vehicleno":  "<vehicleno>", "type": "<ignition|crank|can|charge|discharge>", "token": "<token>"}'
  ```
  - Response structure:
  ```json
@@ -426,7 +426,7 @@ Reponse bodies conform to the following structure:
  ```bash
     curl https://apiplatform.intellicar.in/api/standard/mobilize \
          --header 'Content-Type: application/json' \
-         --data '{"vehicleno":  "<vehicleno>", "type": "<ignition|crank>", "token": "<token>"}'
+         --data '{"vehicleno":  "<vehicleno>", "type": "<ignition|crank|can|charge|discharge>", "token": "<token>"}'
  ```
  - Response structure:
  ```json
