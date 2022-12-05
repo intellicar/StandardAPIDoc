@@ -507,3 +507,35 @@ Reponse bodies conform to the following structure:
        "msg": "<msg>"
     }
  ```
+
+### Get ArbID CAN_params Mapping Information
+#### ArbID CAN_params Mapping 
+ - ArbID CAN_params Mapping can be obtained using the following API:
+ ```bash
+    curl https://apiplatform.intellicar.in/api/standard/listvehicledevicemapping \
+        --header 'Content-Type: application/json' \
+        --data '{"token": "<token>", "vehicleno": "<vehicleno>"}'
+ ```
+ - Response structure:
+ ```json
+    {
+       "status": "SUCCESS|FAILURE",
+       "data": {
+            "0x5XX6": [
+                "battery_voltage",
+                "current"
+            ],
+            "0x5XX8": [
+                "acceleration_pedal_position",
+                "brake_pedal"
+            ],
+            "0x5XX9": [
+                "odometer",
+                "vehicle_speed"
+            ]
+         }
+       "err": "<err>",
+       "msg": "<msg>"
+    }
+ ```
+ 
