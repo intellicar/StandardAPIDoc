@@ -512,7 +512,7 @@ Reponse bodies conform to the following structure:
 #### ArbID CAN_params Mapping 
  - ArbID CAN_params Mapping can be obtained using the following API:
  ```bash
-    curl https://apiplatform.intellicar.in/api/standard/listvehicledevicemapping \
+    curl https://apiplatform.intellicar.in/api/standard/getarbidparammap \
         --header 'Content-Type: application/json' \
         --data '{"token": "<token>", "vehicleno": "<vehicleno>"}'
  ```
