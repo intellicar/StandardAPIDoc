@@ -1,7 +1,7 @@
-## Document moved to 
-https://github.com/intellicar/Documentation/wiki
-
 [Standard API Documentation](https://github.com/intellicar/Documentation/wiki/Standard-APIs-Docs)
+
+### Standard API Documentation have been moved to
+https://github.com/intellicar/Documentation/wiki
 
 <!-- # Standard APIs
 ## Table of Contents
