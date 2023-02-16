@@ -1,4 +1,9 @@
-# Standard APIs
+## Document moved to 
+https://github.com/intellicar/Documentation/wiki
+
+[Standard API Documentation](https://github.com/intellicar/Documentation/wiki/Standard-APIs-Docs)
+
+<!-- # Standard APIs
 ## Table of Contents
 1. [Getting Started](#getting-started)
 2. [Conventions](#conventions)
@@ -539,3 +544,4 @@ Reponse bodies conform to the following structure:
     }
  ```
  
+ -->
