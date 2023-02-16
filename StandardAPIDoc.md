@@ -1,7 +1,11 @@
 [Standard API Documentation](https://github.com/intellicar/Documentation/wiki/Standard-APIs-Docs)
 
-### Standard API Documentation have been moved to
-https://github.com/intellicar/Documentation/wiki
+
+> __Note__ 
+> I wanted to let you know that the standard API documentation has been moved to a new location. You can now access it at 
+> https://github.com/intellicar/Documentation/wiki.
+
+
 
 <!-- # Standard APIs
 ## Table of Contents
