@@ -2,7 +2,7 @@
 
 
 > __Note__ 
-> I wanted to let you know that the standard API documentation has been moved to a new location. You can now access it at 
+> The standard API documentation has been moved to a new location. You can now access it at 
 > https://github.com/intellicar/Documentation/wiki.
 
 
